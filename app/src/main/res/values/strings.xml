@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="bienvenida">BIENVENIDO AL JUEGO</string>
+    <string name="ingrese">Ingrese un numero a arriesgar del 1 al 100</string>
+    <string name="ganaaaasteeee">GANAAAASTEEEE!!!</string>
+    <string name="numero">NUMERO</string>
+</resources>
