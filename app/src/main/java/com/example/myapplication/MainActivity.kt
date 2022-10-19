@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -42,6 +43,12 @@ class MainActivity : AppCompatActivity() {
                                  highestScore=numberOfAttemptsCounter
                              }
 
+                             val intent=Intent(this,GanasteActivity::class.java).apply{
+                                 putExtra("score",highestScore.toString().toInt())
+                                 putExtra("numero",ramdonNumber)
+                                 putExtra("intentos",numberOfAttemptsCounter)
+                             }
+                             startActivity(intent)
                             binding.printText="""      GANASTEEEEEE!!!! 
                                  |cantidad de intentos=$numberOfAttemptsCounter
                                  |record=$highestScore
