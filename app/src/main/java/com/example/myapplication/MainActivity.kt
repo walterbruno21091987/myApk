@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                              else{
                                  highestScore=numberOfAttemptsCounter
                              }
+
                             binding.printText="""      GANASTEEEEEE!!!! 
                                  |cantidad de intentos=$numberOfAttemptsCounter
                                  |record=$highestScore
