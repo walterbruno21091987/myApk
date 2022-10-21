@@ -13,10 +13,14 @@ lateinit var numberWin:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        setContentView(R.layout.activity_ganaste)
-highCore=findViewById<TextView?>(R.id.resultHigscore).apply { text="${intent.getStringExtra("score")}" }
-intentCount=findViewById<TextView?>(R.id.resultIntent).apply { text=intent.getStringExtra("intentos") }
-numberWin=findViewById<TextView?>(R.id.resultNumerWin).apply { text=intent.getStringExtra("numero") }
+        val bundle=intent.extras
 
+highCore=findViewById<TextView?>(R.id.resultHigscore)
+        highCore.text=bundle?.getInt("score").toString()
+intentCount=findViewById<TextView?>(R.id.resultIntent)
+        intentCount.text=bundle?.getInt("intentos").toString()
+numberWin=findViewById<TextView?>(R.id.resultNumerWin)
+ numberWin.text=bundle?.getInt("numero").toString()
 
     }
 }

@@ -43,16 +43,13 @@ class MainActivity : AppCompatActivity() {
                                  highestScore=numberOfAttemptsCounter
                              }
 
-                             val intent=Intent(this,GanasteActivity::class.java).apply{
-                                 putExtra("score",highestScore.toString().toInt())
-                                 putExtra("numero",ramdonNumber)
-                                 putExtra("intentos",numberOfAttemptsCounter)
-                             }
+                             val intent=Intent(this,GanasteActivity::class.java)
+                                 intent.putExtra("score",highestScore.toString().toInt())
+                                 intent.putExtra("numero",ramdonNumber)
+                                 intent.putExtra("intentos",numberOfAttemptsCounter)
+
                              startActivity(intent)
-                            binding.printText="""      GANASTEEEEEE!!!! 
-                                 |cantidad de intentos=$numberOfAttemptsCounter
-                                 |record=$highestScore
-                             """.trimMargin()
+
                              numberOfAttemptsCounter=0
                              ramdonNumber=(Math.random()*100+1).toInt()
 
